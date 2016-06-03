@@ -8,9 +8,13 @@ import {FoodListDisplayComponent} from './food-list-display.component';
   directives: [AddFoodComponent, FoodListDisplayComponent],
   template:`
     <div class="container">
-      <h1>YOUR FOOD BRO</h1>
-      <add-food (onSubmit)='addToFoodList($event)'></add-food>
-      <food-list-display [foodList]="foodList"></food-list-display>
+      <div class="top">
+        <h1>YOUR FOOD BRO</h1>
+        <add-food (onSubmit)='addToFoodList($event)'></add-food>
+      </div>
+      <div class="bottom">
+        <food-list-display [foodList]="foodList"></food-list-display>
+      </div>
     </div>
   `
 })

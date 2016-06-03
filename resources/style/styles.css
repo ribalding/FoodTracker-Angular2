@@ -1,6 +1,9 @@
 body{
   background-color: maroon;
   color: #eaeaea;
+}
+
+h1, h2, h3{
   font-family: 'Pacifico', cursive;
 }
 
@@ -9,5 +12,18 @@ input{
 }
 
 .filterBox{
+  margin-top: 20px;
+}
+
+.top{
+  padding-bottom: 40px;
+  border-radius: 2px;
+  border-bottom: 10px solid #eaeaea;
+}
+
+.bottom{
+  padding-top: 30px;
+  border-radius: 2px;
+  border-top: 10px solid #eaeaea;
   margin-top: 20px;
 }
