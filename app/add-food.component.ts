@@ -9,7 +9,7 @@ import {Component, EventEmitter} from 'angular2/core';
     <input type="text" placeholder="Name" class="input-lg" #inputName>
     <input type="text" placeholder="Details" class="input-lg" #inputDetails>
     <input type="text" placeholder="Calories" class="input-lg" #inputCalories>
-    <button (click)='addFood(inputName, inputDetails, inputCalories)'>Submit</button>
+    <button class="btn btn-primary" (click)='addFood(inputName, inputDetails, inputCalories)'>Submit</button>
   `
 })
 

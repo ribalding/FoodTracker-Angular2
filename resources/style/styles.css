@@ -1,0 +1,13 @@
+body{
+  background-color: maroon;
+  color: #eaeaea;
+  font-family: 'Pacifico', cursive;
+}
+
+input{
+  color: black;
+}
+
+.filterBox{
+  margin-top: 20px;
+}
