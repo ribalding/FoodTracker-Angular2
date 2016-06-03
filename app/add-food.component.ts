@@ -18,9 +18,8 @@ export class AddFoodComponent{
   constructor(){
     this.onSubmit = new EventEmitter();
   }
-  addFood(name: HTMLInputElement, details: HTMLInputElement, calories: HTMLInputElement){
+  addFood(name: HTMLInputElement, details: HTMLInputElement, calories: HTMLInputElement): void{
     var newFood = new Food(name.value, details.value, parseInt(calories.value));
-    console.log(newFood);
     this.onSubmit.emit(newFood);
   }
 }
