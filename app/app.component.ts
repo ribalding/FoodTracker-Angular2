@@ -9,7 +9,7 @@ import {FoodListDisplayComponent} from './food-list-display.component';
   template:`
     <div class="container">
       <div class="top">
-        <h1>YOUR FOOD BRO</h1>
+        <h1>'FOO'D</h1>
         <add-food (onSubmit)='addToFoodList($event)'></add-food>
       </div>
       <div class="bottom">
