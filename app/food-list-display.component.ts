@@ -3,13 +3,13 @@ import {Component} from 'angular2/core';
 import {FoodDisplayComponent} from './food-display.component';
 import {EditFoodDisplayComponent} from './edit-food-display.component';
 import {CaloriesPipe} from './calories.pipe';
-import {TotalCalorieDisplayComponent} from './total-calorie-display.component';
+
 
 @Component({
   selector: 'food-list-display',
   inputs: ['foodList'],
   pipes: [CaloriesPipe],
-  directives: [FoodDisplayComponent, EditFoodDisplayComponent, TotalCalorieDisplayComponent],
+  directives: [FoodDisplayComponent, EditFoodDisplayComponent],
   template:`
   <div class="row">
     <h3 class="col-sm-2">Name</h3>
@@ -24,7 +24,7 @@ import {TotalCalorieDisplayComponent} from './total-calorie-display.component';
   </div>
   <food-display *ngFor="#currentFood of foodList | calories:filterChoice" [food]='currentFood' (click)='foodClicked(currentFood)'></food-display>
   <edit-food-display *ngIf="clickedFood" [clickedFood]='clickedFood'></edit-food-display>
-  <total-calorie-display *ngFor="#currentFood of foodList"></total-calorie-display>
+
   `
 })
 
@@ -40,9 +40,5 @@ export class FoodListDisplayComponent{
   }
   foodClicked(food: Food){
     this.clickedFood = food;
-  }
-  addCalories(food: Food){
-    this.totalCalories += food.calories;
-    console.log(this.totalCalories);
   }
 }
